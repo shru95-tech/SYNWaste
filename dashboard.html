@@ -1,0 +1,68 @@
+<!--
+BEGINNER-FRIENDLY BUT JUDGE-READY FRONTEND
+Project: Smart Waste Management System (6-hour Hackathon)
+Includes:
+- Register Page (validation)
+- Login Page (validation)
+- Dashboard with features, icons, settings, logout
+No backend yet (logic simulated)
+-->
+
+<!-- ================= dashboard.html ================= --><!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard | Smart Waste</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<script src="script.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <h1>Your Buddy SynWaste</h1>
+  <div class="menu">
+    <button class="notify-btn" onclick="toggleNotifications()" title="Toggle Alerts">
+      <i class="fa fa-bell"></i>
+    </button>
+    <i class="fa fa-leaf" title="Sustainability"></i>
+    <i class="fa fa-gear" onclick="openSettings()" title="Settings"></i>
+    <i class="fa fa-sign-out" onclick="logout()" title="Logout"></i>
+  </div>
+</header><section class="stats">
+  <div class="stat"><i class="fa fa-seedling"></i><h3>Eco Mode</h3><p>Active</p></div>
+  <div class="stat"><i class="fa fa-trash"></i><h3>12</h3><p>Total Bins</p></div>
+  <div class="stat"><i class="fa fa-bell"></i><h3>3</h3><p>Critical Alerts</p></div>
+  <div class="stat"><i class="fa fa-truck"></i><h3>2</h3><p>Routes Active</p></div>
+</section><section class="bin-groups">
+  <h2 class="group-title green">🟢 Safe Bins</h2>
+  <div class="bins">
+    <div class="bin ok" data-loc="Sector 12">
+      <h4><i class="fa fa-trash"></i> Sector 12</h4>
+      <p>Fill Level: 40%</p>
+      <span>Status: Safe</span>
+      <iframe src="https://maps.google.com/maps?q=Sector%2012&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+    <div class="bin ok" data-loc="Park Area">
+      <h4><i class="fa fa-trash"></i> Park Area</h4>
+      <p>Fill Level: 25%</p>
+      <span>Status: Safe</span>
+      <iframe src="https://maps.google.com/maps?q=Park%20Area&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>  <h2 class="group-title yellow">🟡 Warning Bins</h2>
+  <div class="bins">
+    <div class="bin warn" data-loc="Bus Stand">
+      <h4><i class="fa fa-trash"></i> Bus Stand</h4>
+      <p>Fill Level: 70%</p>
+      <span>Status: Warning</span>
+      <iframe src="https://maps.google.com/maps?q=Bus%20Stand&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>  <h2 class="group-title red">🔴 Critical Bins</h2>
+  <div class="bins">
+    <div class="bin danger" data-loc="Main Market">
+      <h4><i class="fa fa-trash"></i> Main Market</h4>
+      <p>Fill Level: 90%</p>
+      <span>Status: Critical</span>
+      <iframe src="https://maps.google.com/maps?q=Main%20Market&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+</section></body>
+</html>
